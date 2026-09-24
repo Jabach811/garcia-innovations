@@ -64,12 +64,16 @@
   .services .end p{font-size:19px}
   .services .call{display:inline-block}
 
-  .work .grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:280px;gap:12px}
-  .work figure{margin:0;display:flex;flex-direction:column;gap:10px}
-  .work figure div{flex:1;min-height:0}
+  .work .group + .group{margin-top:56px}
+  .work h3{font:600 18px/1.1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#9f988c;margin-bottom:16px}
+  .work .row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .work figure{margin:0}
+  .work figure div{aspect-ratio:4/5;cursor:zoom-in}
   .work figure img{width:100%;height:100%;object-fit:cover}
-  .work .big{grid-row:span 2}
-  .work figcaption{font:500 13px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#9f988c}
+  .work figcaption{font:500 13px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#9f988c;margin-top:10px}
+  .viewer{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;z-index:9}
+  .viewer.on{display:flex}
+  .viewer img{max-height:100%;object-fit:contain}
 
   footer{background:#0c0b0a;color:#9f988c;font-size:15px}
   footer .in{max-width:1200px;margin:0 auto;padding:64px 32px 28px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
@@ -100,8 +104,8 @@
     .services li{font-size:18px}
     .services .end{margin-top:40px}
     .services .end .call{width:100%;text-align:center}
-    .work .grid{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
-    .work .big{grid-column:1/-1;grid-row:span 1}
+    .work .row{grid-template-columns:1fr 1fr;gap:8px}
+    .work .group + .group{margin-top:40px}
   }
 </style>
 </head>
@@ -130,16 +134,40 @@
 <section class="work" id="work">
   <div class="wrap">
     <h2>Our Work</h2>
-    <p class="lede">Recent jobs around Tracy, inside and out.</p>
-    <div class="grid">
-      <figure class="big"><div><img src="img/patio-pergola.jpg" alt="" loading="lazy"></div><figcaption>Patio &amp; pergola</figcaption></figure>
-      <figure><div><img src="img/kitchen-island.jpg" alt="" loading="lazy"></div><figcaption>Kitchen</figcaption></figure>
+    <p class="lede">Recent jobs around Tracy.</p>
+    <div class="group"><h3>Patios &amp; pavers</h3><div class="row">
+      <figure><div><img src="img/patio-pergola.jpg" alt="" loading="lazy"></div><figcaption>Patio &amp; pergola</figcaption></figure>
+      <figure><div><img src="img/pool-patio.jpg" alt="" loading="lazy"></div><figcaption>Pool patio</figcaption></figure>
+      <figure><div><img src="img/paver-walkway.jpg" alt="" loading="lazy"></div><figcaption>Paver walkway</figcaption></figure>
+      <figure><div><img src="img/paver-driveway.jpg" alt="" loading="lazy"></div><figcaption>Paver driveway</figcaption></figure>
+    </div></div>
+    <div class="group"><h3>Pergolas &amp; outdoor kitchens</h3><div class="row">
+      <figure><div><img src="img/outdoor-kitchen.jpg" alt="" loading="lazy"></div><figcaption>Outdoor kitchen</figcaption></figure>
+      <figure><div><img src="img/wood-pergola.jpg" alt="" loading="lazy"></div><figcaption>Wood pergola &amp; deck</figcaption></figure>
+      <figure><div><img src="img/wood-pavilion.jpg" alt="" loading="lazy"></div><figcaption>Wood pavilion</figcaption></figure>
+      <figure><div><img src="img/pergola.jpg" alt="" loading="lazy"></div><figcaption>Metal pergola</figcaption></figure>
+    </div></div>
+    <div class="group"><h3>Yards &amp; fences</h3><div class="row">
+      <figure><div><img src="img/turf-yard.jpg" alt="" loading="lazy"></div><figcaption>Turf &amp; concrete pads</figcaption></figure>
+      <figure><div><img src="img/rock-garden.jpg" alt="" loading="lazy"></div><figcaption>Rock garden</figcaption></figure>
+      <figure><div><img src="img/fence-garden.jpg" alt="" loading="lazy"></div><figcaption>Fence &amp; planters</figcaption></figure>
+      <figure><div><img src="img/iron-gate.jpg" alt="" loading="lazy"></div><figcaption>Iron gate</figcaption></figure>
+    </div></div>
+    <div class="group"><h3>Kitchens &amp; baths</h3><div class="row">
+      <figure><div><img src="img/kitchen-island.jpg" alt="" loading="lazy"></div><figcaption>Kitchen island</figcaption></figure>
+      <figure><div><img src="img/kitchen-cabinets.jpg" alt="" loading="lazy"></div><figcaption>Cabinets &amp; counters</figcaption></figure>
+      <figure><div><img src="img/backsplash.jpg" alt="" loading="lazy"></div><figcaption>Backsplash</figcaption></figure>
       <figure><div><img src="img/shower-tile.jpg" alt="" loading="lazy"></div><figcaption>Shower tile</figcaption></figure>
-      <figure><div><img src="img/fence-roses.jpg" alt="" loading="lazy"></div><figcaption>Fence</figcaption></figure>
-      <figure><div><img src="img/staircase.jpg" alt="" loading="lazy"></div><figcaption>Stairs</figcaption></figure>
-    </div>
+    </div></div>
+    <div class="group"><h3>Floors &amp; stairs</h3><div class="row">
+      <figure><div><img src="img/staircase.jpg" alt="" loading="lazy"></div><figcaption>Staircase</figcaption></figure>
+      <figure><div><img src="img/hall-floor-glass.jpg" alt="" loading="lazy"></div><figcaption>Hallway floor</figcaption></figure>
+      <figure><div><img src="img/floor-tile.jpg" alt="" loading="lazy"></div><figcaption>Floor &amp; tile</figcaption></figure>
+      <figure><div><img src="img/room-floor.jpg" alt="" loading="lazy"></div><figcaption>Bedroom floor</figcaption></figure>
+    </div></div>
   </div>
 </section>
+<div class="viewer"><img alt=""></div>
 
 <section class="services" id="services">
   <div class="wrap">
@@ -173,5 +201,10 @@
   </div>
 </div></footer>
 
+<script>
+  const v = document.querySelector('.viewer');
+  document.querySelectorAll('.work figure img').forEach(i => i.onclick = () => { v.firstChild.src = i.src; v.classList.add('on'); });
+  v.onclick = () => v.classList.remove('on');
+</script>
 </body>
 </html>
