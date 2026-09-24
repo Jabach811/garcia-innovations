@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garcia Innovations | Construction &amp; Remodeling in Tracy, CA</title>
+<meta name="description" content="Garcia Innovations is a general contractor in Tracy, California. Interior, exterior, remodeling, and construction. Call (925) 339-4214.">
+<link rel="icon" href="img/mark.png">
+<meta property="og:title" content="Garcia Innovations">
+<meta property="og:description" content="Interior, exterior, remodeling, and construction in Tracy, CA. Call (925) 339-4214.">
+<meta property="og:image" content="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#F5B50D; --brick:#DF550E; --slate:#466C91; --sand:#DCCBB1; --steel:#98999D;
+    --ink:#141210;
+    --cond:"Oswald", "Arial Narrow", sans-serif;
+    --body:"Source Sans 3", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{font-family:var(--body);background:var(--ink);color:#EDE8DF}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  .hero{position:relative;overflow:hidden;color:#fff;text-align:center;background:var(--ink)}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:fade 18s infinite}
+  .hero .bg img:nth-child(2){animation-delay:6s}
+  .hero .bg img:nth-child(3){animation-delay:12s}
+  @keyframes fade{0%{opacity:0}6%{opacity:1}33%{opacity:1}40%{opacity:0}100%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){.hero .bg img{animation:none}.hero .bg img:first-child{opacity:1}}
+  .hero .shade{position:absolute;inset:0;background:rgba(14,12,10,.8)}
+  .hero .inner{position:relative;max-width:1200px;margin:0 auto;padding:0 32px 96px}
+  .hero nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font:500 15px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;color:#d8d2c7}
+  .hero nav .links{display:flex;gap:28px}
+  .hero nav a:hover{color:var(--gold)}
+  .hero h1{margin:48px auto 40px;max-width:680px}
+  .hero h1 img{width:100%;height:auto}
+  .hero .btns{display:flex;gap:14px;justify-content:center}
+  .call{background:var(--gold);color:var(--ink);font:600 18px/1 var(--cond);letter-spacing:.04em;padding:18px 28px;border-radius:4px}
+  .ghost{font:600 18px/1 var(--cond);letter-spacing:.04em;padding:17px 26px;border-radius:4px;border:1px solid rgba(255,255,255,.7)}
+  .call:hover{background:#ffc62e}
+  .ghost:hover{background:rgba(255,255,255,.1)}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:96px 32px}
+  h2{font:600 44px/1.05 var(--cond);letter-spacing:.02em;text-transform:uppercase}
+  .lede{font-size:19px;line-height:1.5;margin:14px 0 40px;max-width:52ch;color:#b9b2a6}
+
+  .services{background:#F6F1E8;color:var(--ink)}
+  .services .lede,.services .end p{color:#5a544a}
+  .services .groups{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+  .services h3{font:600 18px/1.1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#8a8275;margin-bottom:16px}
+  .services ul{list-style:none;padding:0}
+  .services li{font:500 22px/1.2 var(--cond);letter-spacing:.02em;text-transform:uppercase;padding:12px 0;border-top:1px solid #d6ccbb}
+  .services .end{margin-top:56px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+  .services .end p{font-size:19px}
+  .services .call{display:inline-block}
+
+  .work .grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:280px;gap:12px}
+  .work figure{margin:0;display:flex;flex-direction:column;gap:10px}
+  .work figure div{flex:1;min-height:0}
+  .work figure img{width:100%;height:100%;object-fit:cover}
+  .work .big{grid-row:span 2}
+  .work figcaption{font:500 13px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#9f988c}
+
+  footer{background:#0c0b0a;color:#9f988c;font-size:15px}
+  footer .in{max-width:1200px;margin:0 auto;padding:64px 32px 28px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+  footer .mark{width:160px;height:auto;margin-bottom:28px}
+  footer h2{font-size:40px;color:#EDE8DF}
+  footer p{font-size:18px;line-height:1.5;color:#b9b2a6;margin:12px 0 28px;max-width:46ch}
+  footer .big{font:600 48px/1 var(--cond);letter-spacing:.02em;color:#EDE8DF;display:block;margin-bottom:8px}
+  footer .call{display:inline-block}
+  footer .bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  footer nav{display:flex;gap:24px;font:500 14px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase}
+  footer nav a:hover{color:var(--gold)}
+
+  @media (max-width:800px){
+    footer .in{padding:48px 16px 24px;grid-template-columns:1fr;gap:24px}
+    footer h2{font-size:30px}
+    footer p{font-size:17px}
+    footer .big{font-size:36px}
+    footer nav{flex-wrap:wrap;gap:16px 20px}
+    footer .call{display:block;text-align:center}
+    .hero .inner{padding:0 16px 56px}
+    .hero nav .links{display:none}
+    .hero h1{margin:24px auto 32px}
+    .hero .btns{flex-direction:column}
+    .wrap{padding:56px 16px}
+    h2{font-size:34px}
+    .lede{font-size:17px;margin-bottom:28px}
+    .services .groups{grid-template-columns:1fr 1fr;gap:32px 20px}
+    .services li{font-size:18px}
+    .services .end{margin-top:40px}
+    .services .end .call{width:100%;text-align:center}
+    .work .grid{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+    .work .big{grid-column:1/-1;grid-row:span 1}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="bg" aria-hidden="true">
+    <img src="img/patio-pergola.jpg" alt="">
+    <img src="img/kitchen-island.jpg" alt="">
+    <img src="img/fence-roses.jpg" alt="">
+  </div>
+  <div class="shade"></div>
+  <div class="inner">
+    <nav>
+      <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a></div>
+      <a href="tel:+19253394214">Contact</a>
+    </nav>
+    <h1><img src="img/logo.png" width="900" height="695" alt="Garcia Innovations. Interior, exterior, remodeling, construction. (925) 339-4214"></h1>
+    <div class="btns">
+      <a class="call" href="tel:+19253394214">Tap to call</a>
+      <a class="ghost" href="#work">See our work</a>
+    </div>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2>Services</h2>
+    <p class="lede">One local crew for homes and businesses in Tracy.</p>
+    <div class="groups">
+      <div><h3>Interior</h3><ul><li>Kitchens</li><li>Showers &amp; tile</li><li>Floors</li><li>Staircases</li></ul></div>
+      <div><h3>Exterior</h3><ul><li>Patios &amp; pergolas</li><li>Fences &amp; gates</li><li>Turf &amp; walkways</li><li>Driveways</li></ul></div>
+      <div><h3>Remodeling</h3><ul><li>Homes</li><li>Commercial spaces</li></ul></div>
+      <div><h3>Construction</h3><ul><li>Pergolas</li><li>Concrete pads</li><li>New structures</li></ul></div>
+    </div>
+    <div class="end">
+      <a class="call" href="tel:+19253394214">Call (925) 339-4214</a>
+      <p>Tell us about the job.</p>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2>Our Work</h2>
+    <p class="lede">Recent jobs around Tracy, inside and out.</p>
+    <div class="grid">
+      <figure class="big"><div><img src="img/patio-pergola.jpg" alt="" loading="lazy"></div><figcaption>Patio &amp; pergola</figcaption></figure>
+      <figure><div><img src="img/kitchen-island.jpg" alt="" loading="lazy"></div><figcaption>Kitchen</figcaption></figure>
+      <figure><div><img src="img/shower-tile.jpg" alt="" loading="lazy"></div><figcaption>Shower tile</figcaption></figure>
+      <figure><div><img src="img/fence-roses.jpg" alt="" loading="lazy"></div><figcaption>Fence</figcaption></figure>
+      <figure><div><img src="img/staircase.jpg" alt="" loading="lazy"></div><figcaption>Stairs</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<footer><div class="in">
+  <div>
+    <img class="mark" src="img/mark.png" width="400" height="185" alt="">
+    <h2>Got a project in mind?</h2>
+    <p>Give us a call and tell us about the job.</p>
+    <a class="big" href="tel:+19253394214">(925) 339-4214</a>
+    <span>Garcia Innovations &middot; Tracy, California</span>
+  </div>
+  <a class="call" href="tel:+19253394214">Tap to call</a>
+  <div class="bottom">
+    <nav><a href="#services">Services</a><a href="#work">Our Work</a></nav>
+    <span>&copy; 2026 Garcia Innovations</span>
+  </div>
+</div></footer>
+
+</body>
+</html>
